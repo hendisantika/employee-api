@@ -9,3 +9,8 @@ Check this Front End Repository --> https://github.com/hendisantika/react-front-
 2. Navigate to the folder: `cd employee-api`
 3. Run the application: `mvn clean spring-boot:run`
 4. Open Your favorite browser: http://localhost:8080/swagger-ui
+
+### Swagger UI
+
+![Swagger UI](img/SwaggerUI.png "Swagger UI")
+
