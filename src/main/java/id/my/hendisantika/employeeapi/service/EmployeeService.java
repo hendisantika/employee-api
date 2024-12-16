@@ -1,6 +1,7 @@
 package id.my.hendisantika.employeeapi.service;
 
 import id.my.hendisantika.employeeapi.entity.Employee;
+import id.my.hendisantika.employeeapi.exception.ResourceNotFoundException;
 import id.my.hendisantika.employeeapi.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -30,5 +31,10 @@ public class EmployeeService {
 
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
+    }
+
+    public Employee getEmployeeById(long id) {
+        return employeeRepository.findById(id).orElseThrow(() ->
+                new ResourceNotFoundException("Employee", "Id", id));
     }
 }
