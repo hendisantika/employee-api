@@ -1,8 +1,13 @@
 package id.my.hendisantika.employeeapi.controller;
 
+import id.my.hendisantika.employeeapi.entity.Employee;
 import id.my.hendisantika.employeeapi.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,4 +27,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class EmployeeController {
     private final EmployeeService employeeService;
+
+    @PostMapping
+    public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee) {
+        return new ResponseEntity<Employee>(employeeService.saveEmployee(employee), HttpStatus.CREATED);
+    }
 }
