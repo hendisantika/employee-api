@@ -1,5 +1,6 @@
 package id.my.hendisantika.employeeapi.service;
 
+import id.my.hendisantika.employeeapi.entity.Employee;
 import id.my.hendisantika.employeeapi.repository.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,4 +21,9 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class EmployeeService {
     private final EmployeeRepository employeeRepository;
+
+    public Employee saveEmployee(Employee employee) {
+        return employeeRepository.save(employee);
+    }
+
 }
