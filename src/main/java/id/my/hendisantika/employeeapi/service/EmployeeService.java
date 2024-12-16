@@ -6,6 +6,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by IntelliJ IDEA.
  * Project : employee-api
@@ -26,4 +28,7 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
+    public List<Employee> getAllEmployees() {
+        return employeeRepository.findAll();
+    }
 }
