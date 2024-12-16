@@ -23,7 +23,7 @@ public class OpenAPIConfig {
             "-version}") String appVersion) {
         OpenAPI openAPI = new OpenAPI();
         openAPI.info(new io.swagger.v3.oas.models.info.Info()
-                .title("Cassandra Service API")
+                .title("Student Service API")
                 .description(appDescription)
                 .version(appVersion)
                 .contact(new io.swagger.v3.oas.models.info.Contact()
