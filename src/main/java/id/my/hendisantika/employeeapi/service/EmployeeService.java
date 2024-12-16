@@ -37,4 +37,17 @@ public class EmployeeService {
         return employeeRepository.findById(id).orElseThrow(() ->
                 new ResourceNotFoundException("Employee", "Id", id));
     }
+
+    public Employee updateEmployee(Employee employee, long id) {
+        // we need to check whether employee with given ID exists in DB or not
+        Employee existingEmployee = employeeRepository.findById(id).orElseThrow(
+                () -> new ResourceNotFoundException("Employee", "id", id)
+        );
+        existingEmployee.setFirstName(employee.getFirstName());
+        existingEmployee.setLastName(employee.getLastName());
+        existingEmployee.setEmail(employee.getEmail());
+        // save existing employee to DB
+        employeeRepository.save(existingEmployee);
+        return existingEmployee;
+    }
 }
