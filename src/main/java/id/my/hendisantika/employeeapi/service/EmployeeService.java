@@ -50,4 +50,12 @@ public class EmployeeService {
         employeeRepository.save(existingEmployee);
         return existingEmployee;
     }
+
+    public void deleteEmployee(long id) {
+        // check whether an employee exist in a DB or not
+        employeeRepository.findById(id).orElseThrow(() ->
+                new ResourceNotFoundException("Employee", "Id", id));
+
+        employeeRepository.deleteById(id);
+    }
 }
