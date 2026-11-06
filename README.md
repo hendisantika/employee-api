@@ -3,7 +3,7 @@
 [![Java CI with Maven](https://github.com/hendisantika/employee-api/actions/workflows/maven.yml/badge.svg)](https://github.com/hendisantika/employee-api/actions/workflows/maven.yml)
 ![Java](https://img.shields.io/badge/Java-25-orange?logo=openjdk)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1.2-6DB33F?logo=springboot)
-![MySQL](https://img.shields.io/badge/MySQL-9.1-4479A1?logo=mysql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-26.7-4479A1?logo=mysql&logoColor=white)
 [![Dependabot](https://img.shields.io/badge/Dependabot-enabled-025E8C?logo=dependabot)](.github/dependabot.yml)
 
 This is the Backend (REST API) Repository for the Front End UI.
@@ -13,7 +13,7 @@ Check this Front End Repository --> https://github.com/hendisantika/react-front-
 
 - Java 25 (Temurin)
 - Spring Boot 4 (Web MVC, Data JPA, Docker Compose support, DevTools)
-- MySQL 9.1
+- MySQL 26.7
 - springdoc-openapi (Swagger UI)
 - Lombok
 - Testcontainers + JUnit 5
